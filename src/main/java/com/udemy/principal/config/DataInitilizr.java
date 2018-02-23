@@ -20,7 +20,12 @@ public class DataInitilizr implements ApplicationListener<ContextRefreshedEvent>
 		createUser("Matheus", "Matheus.cont");
 		createUser("João", "João.teste");
 		
+		User user = userRepository.findByNameIgnoreCaseLike("mat");		
+		System.out.println(user.getName());
+		
 	}
+	
+	
 	
 	public void createUser(String name, String email) {
 		User user = new User(name, email);

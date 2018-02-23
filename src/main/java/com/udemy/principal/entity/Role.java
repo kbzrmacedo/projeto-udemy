@@ -1,9 +1,10 @@
 package com.udemy.principal.entity;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Role {
 
 	@Id // chave primaria
